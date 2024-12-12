@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    /* Colors */
+
+    /* Primary */
+
+    --Blue: hsl(246, 80%, 60%);
+
+    --Light-red: hsl(15, 100%, 70%);
+    /* (work) */
+    --Soft-blue: hsl(195, 74%, 62%);
+    /* (play) */
+    --Light-red: hsl(348, 100%, 68%);
+    /* (study)*/
+    --Lime-green: hsl(145, 58%, 55%);
+    /*(exercise)*/
+    --Violet: hsl(264, 64%, 52%);
+    /* (social)*/
+    --Soft-orange: hsl(43, 84%, 65%);
+    /* (self care)*/
+
+    /* Neutral */
+
+    --Very-dark-blue: hsl(226, 43%, 10%);
+    --Dark-blue: hsl(235, 46%, 20%);
+    --Desaturated-blue: hsl(235, 45%, 61%);
+    --Pale-Blue: hsl(236, 100%, 87%);
+
+    /* font family */
+
+    --ff: "Rubik", sans-serif;
+
+    /* font size */
+
+    /* Fonts */
+    --font-size-h1: clamp(2.4rem, 1.8366rem + 1.5023vw, 4rem);
+    --font-size-time-window: 1.8rem;
+    --font-size-activity-name: 1.8rem;
+    --font-size-activity-result: clamp(3.2rem, 2.3549rem + 2.2535vw, 5.6rem);
+    --font-size-activity-window: 1.5rem;
+
+    /* Z-indexes */
+
+    --z-index-top: 10;
+    --z-index-middle: 5;
+    --z-index-bottom: 1;
+
+    /* Border Radius */
+
+    --br: 1.5rem;
+
+    /* font weight */
+
+    --fw-normal: 400;
+    --fw-tente: 300;
+    --fw-bold: 500;
+
+
+}
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+
+body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+    text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+    isolation: isolate;
+}
