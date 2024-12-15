@@ -7,11 +7,13 @@
 
     --Blue: hsl(246, 80%, 60%);
 
+    --white: hsl(0, 0%, 100%);
+
     --Light-red: hsl(15, 100%, 70%);
     /* (work) */
     --Soft-blue: hsl(195, 74%, 62%);
     /* (play) */
-    --Light-red: hsl(348, 100%, 68%);
+    --pink: hsl(348, 100%, 68%);
     /* (study)*/
     --Lime-green: hsl(145, 58%, 55%);
     /*(exercise)*/
@@ -26,6 +28,20 @@
     --Dark-blue: hsl(235, 46%, 20%);
     --Desaturated-blue: hsl(235, 45%, 61%);
     --Pale-Blue: hsl(236, 100%, 87%);
+    /* colors */
+    --neutral-1: hsl(226, 43%, 10%);
+    --neutral-2: hsl(235, 46%, 20%);
+    --neutral-3: hsl(235, 45%, 61%);
+    --neutral-4: hsl(236, 100%, 87%);
+
+    --avatar: hsl(246, 80%, 60%);
+
+    --orange: hsl(15, 100%, 70%);
+    --cyan: hsl(195, 74%, 62%);
+    --red: hsl(348, 100%, 68%);
+    --green: hsl(145, 58%, 55%);
+    --purple: hsl(264, 64%, 52%);
+    --yellow: hsl(43, 84%, 65%);
 
     /* font family */
 
@@ -40,6 +56,11 @@
     --font-size-activity-result: clamp(3.2rem, 2.3549rem + 2.2535vw, 5.6rem);
     --font-size-activity-window: 1.5rem;
 
+    --fs-18: 1.125rem;
+    --fs-15: .938rem;
+    --fs-24: 1.5rem;
+    --fs-32: 2rem;
+
     /* Z-indexes */
 
     --z-index-top: 10;
@@ -48,7 +69,7 @@
 
     /* Border Radius */
 
-    --br: 1.5rem;
+    --br: 1.125rem;
 
     /* font weight */
 
@@ -56,75 +77,97 @@
     --fw-tente: 300;
     --fw-bold: 500;
 
+    /*  templating cards */
+
+    --background: var(--neutral-2);
+
 
 }
 
-/* 1. Use a more-intuitive box-sizing model */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
 
-/* 2. Remove default margin */
-* {
-    margin: 0;
-}
 
 body {
-    /* 3. Add accessible line-height */
-    line-height: 1.5;
-    /* 4. Improve text rendering */
-    -webkit-font-smoothing: antialiased;
+    font-family: var(--ff);
+    background-color: var(--neutral-1);
+    color: var(--white);
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    padding: 1rem;
 }
 
-/* 5. Improve media defaults */
-img,
-picture,
-video,
-canvas,
-svg {
-    display: block;
-    max-width: 100%;
+.container {
+    display: flex;
+    flex-flow: wrap;
+    gap: clamp(1rem, 3vw, 2rem);
+
 }
 
-/* 6. Inherit fonts for form controls */
-input,
-button,
-textarea,
-select {
-    font: inherit;
+.card {
+    background-color: var(--neutral-2);
+    border-radius: var(--br);
 }
 
-/* 7. Avoid text overflows */
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    overflow-wrap: break-word;
+.card>div {
+    background-color: var(--background);
+
 }
 
-/* 8. Improve line wrapping */
-p {
-    text-wrap: pretty;
+.card--avatar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    text-wrap: balance;
+.card--avatar-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.1rem;
+    --background: var(--avatar);
+    border-radius: var(--br);
+    padding: 2.2rem;
 }
 
-/*
-    9. Create a root stacking context
-  */
-#root,
-#__next {
-    isolation: isolate;
+.avatar {
+    border-radius: 50%;
+    border: .2rem solid white;
+    
+}
+
+h1 > span{
+    font-size: var(--fs-15);
+    font-weight: var(--fw-tente);
+    color: var(--neutral-4);
+}
+
+h1 {
+    font-size: var(--fs-24);
+    font-weight: var(--fw-tente);
+}
+
+.card--avatar-bottom {
+    --background: var(--neutral-2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    padding: 1rem .5rem;
+    border-radius: 0 0 var(--br) var(--br);
+}
+
+.btn {
+    font: var(--fs-18);
+    border-radius: var(--br);
+    color: var(--neutral-3);
+    font-weight: var(--fw-normal);
+    flex: 1 1 100%;
+    cursor: pointer;
+    padding: .2rem .8rem;
+    transition: 200ms;
+}
+
+.btn:hover {
+    color: var(--white);
 }
